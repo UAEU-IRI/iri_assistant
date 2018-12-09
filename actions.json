@@ -1,0 +1,87 @@
+{
+    "manifest": {
+        "displayName": "IRI Voice Assistant",
+        "invocationName": "Voice Assistant",
+        "category": "PRODUCTIVITY"
+    },
+    "actions": [
+        {
+            "name": "pickCube",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "pick Cube",
+                "parameters": [
+                    {
+                        "name": "cube_color",
+                        "type": "Color"
+                    }
+                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "pick ($Color:cube_color)? cube",
+                        "pic ($Color:cube_color)? cube",
+                        "choose ($Color:cube_color)? cube"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "picking $cube_color cube"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "pick",
+                                    "params": {
+                                        "cube_color": "$cube_color"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "types": [
+        {
+            "name": "$Color",
+            "entities": [
+                {
+                    "key": "RED",
+                    "synonyms": [
+                        "red"
+                    ]
+                },
+                {
+                    "key": "BLUE",
+                    "synonyms": [
+                        "blue"
+                    ]
+                },
+                {
+                    "key": "Yellow",
+                    "synonyms": [
+                        "yellow"
+                    ]
+                },
+                {
+                    "key": "BLACK",
+                    "synonyms": [
+                        "black"
+                    ]
+                }                
+            ]
+        }
+    ]
+}
