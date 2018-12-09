@@ -1,0 +1,84 @@
+developer console:  https://console.developers.google.com
+actions console:    https://console.actions.google.com
+
+
+1- Make a google cloud project
+2- register device:  Model id: iri-assistant-computer-kybf1h
+3- with the device registered, I was given a json file which is OAuth credentials
+
+Device: 
+Product name  Manufacturer name  Model Id                           type
+computer      UAEU               iri-assistant-computer-kybf1h      Auto 
+
+Project ID
+iri-assistant
+
+4- Enable GoogleAssistant API for the project. from the developer console.
+
+5- for using this API we need credentials.
+Where will you be calling the API from?
+I chose "Other UI (e.g. Windows,CLI tool)"
+What data will you be accessing?
+Application Data
+
+-----
+Next step was creating service account
+Service ID: iri-virtual-assistant
+
+
+-configure OAuth consent screen
+
+
+Now there are two keys:
+API key
+Service account key
+---------------------------------------
+Install the SDK and Sample Code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
